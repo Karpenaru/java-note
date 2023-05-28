@@ -1,10 +1,7 @@
 package com.example.springdemo.controller;
 
 import com.example.springdemo.model.User;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -23,6 +20,12 @@ public class PostController {
     @PostMapping("/file")
     public String postFile(MultipartFile file) {
         return file.getOriginalFilename();
+    }
+
+
+    @GetMapping("/second")
+    public String getSecond(@RequestParam String name) {
+        return name;
     }
 
 }
