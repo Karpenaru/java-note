@@ -29,4 +29,9 @@ public class HelloController {
         return "hello world" + name;
     }
 
+    @GetMapping("/world5")
+    public String world5(@RequestParam("name") String name) {
+        return "hello world" + name;
+    }
+
 }
